@@ -92,5 +92,11 @@ describe Calculator do
                 expect(dr_buttons.evaluate(test_eq)).to eql(1)
             end
         end
+        context "if given more than two numbers" do
+            it "does arithmetic with them" do
+                test_eq = Equation.new("2 * 6 - 4")
+                expect(dr_buttons.evaluate(test_eq)).to eql(8)
+            end
+        end
     end
 end
